@@ -21,7 +21,7 @@ fn main() {
     io::stdout().flush().unwrap();
 
     let mut input = String::new();
-    io::stdin().read_line(&mut input).unwrap();
+    io::stdin().read_line(&mut input).expect("Failed!");
 
     let word_counter = WordCounter::new(&input);
     let word_count = word_counter.count_words();
